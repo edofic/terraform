@@ -384,6 +384,14 @@ func initCommands(
 			}, nil
 		},
 
+		"state mvf": func() (cli.Command, error) {
+			return &command.StateMvfCommand{
+				StateMeta: command.StateMeta{
+					Meta: meta,
+				},
+			}, nil
+		},
+
 		"state pull": func() (cli.Command, error) {
 			return &command.StatePullCommand{
 				Meta: meta,
